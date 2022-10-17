@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankingApplication.BusinessLayer\BankingApplication.BusinessLayer.csproj" />
+    <ProjectReference Include="..\BankingApplication.CommonLayer\BankingApplication.CommonLayer.csproj" />
+    <ProjectReference Include="..\BankingApplication.DataLayer\BankingApplication.DataLayer.csproj" />
+    <ProjectReference Include="..\BusinessApplication.EFLayer\BusinessApplication.EFLayer.csproj" />
+  </ItemGroup>
+
+</Project>
