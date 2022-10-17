@@ -1,0 +1,52 @@
+﻿@model BankingApplication.WebApp.Models.FundTransferVM
+
+@{
+    ViewData["Title"] = "FundTransfer";
+}
+
+<h1>FundTransfer</h1>
+
+<h4>FundTransferVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="FundTransfer">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SourceAccountNo" class="control-label"></label>
+                <input asp-for="SourceAccountNo" class="form-control" />
+                <span asp-validation-for="SourceAccountNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionAmount" class="control-label"></label>
+                <input asp-for="TransactionAmount" class="form-control" />
+                <span asp-validation-for="TransactionAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionType" class="control-label"></label>
+                <select id="TransactionType" name="TransactionType">
+                    <option selected>Select Transaction Type</option>
+                    <option value="Transfer">Transfer</option>
+                </select>
+                <span asp-validation-for="TransactionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestinationAccountNo" class="control-label"></label>
+                <input asp-for="DestinationAccountNo" class="form-control" />
+                <span asp-validation-for="DestinationAccountNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionDescription" class="control-label"></label>
+                <input asp-for="TransactionDescription" class="form-control" />
+                <span asp-validation-for="TransactionDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

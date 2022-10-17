@@ -1,0 +1,30 @@
+﻿@model BankingApplication.WebApp.Models.DeleteCurrentVM
+
+@{
+    ViewData["Title"] = "DeleteCurrentAccount";
+}
+
+<h1>DeleteCurrentAccount</h1>
+
+<h4>DeleteCurrentVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DeleteCurrentAccount">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TIN" class="control-label"></label>
+                <input asp-for="TIN" class="form-control" />
+                <span asp-validation-for="TIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1 class="text-center" style="background-blend-mode:overlay">Welcome</h1>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <a asp-controller="Manager" asp-action="AddCustomer" class="btn btn-outline-info">
+                    Add Customer
+                </a>
+            </div>
+            <div class="col-4">
+                <a method="post" asp-controller="Manager" asp-action="GetCustomer" class="btn btn-outline-info">
+                    Edit Customer
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Manager" asp-action="DeleteCustomer" class="btn btn-outline-info">
+                    Delete Customer
+                </a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <a asp-controller="Manager" asp-action="CreateAccount" class="btn btn-outline-info">
+                    Add Account
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Manager" asp-action="UpdateAccount" class="btn btn-outline-info">
+                    Edit Account
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Manager" asp-action="DeleteAccount" class="btn btn-outline-info">
+                    Delete Account
+                </a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <a asp-controller="Manager" asp-action="BalanceEnquiry" class="btn btn-outline-info">
+                    Balance Enquiry
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Transaction" asp-action="FundTransfer" class="btn btn-outline-info">
+                    Fund Transfer
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Transaction" asp-action="Withdrawal" class="btn btn-outline-info">
+                    Withdrawal
+                </a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-4">
+                <a asp-controller="Transaction" asp-action="Deposit" class="btn btn-outline-info">
+                    Deposit
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Transaction" asp-action="MiniStatement" class="btn btn-outline-info">
+                    Mini-Statement
+                </a>
+            </div>
+            <div class="col-4">
+                <a asp-controller="Transaction" asp-action="CustomizedStatementFilter" class="btn btn-outline-info">
+                    Customized Statement
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+

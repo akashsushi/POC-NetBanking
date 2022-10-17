@@ -1,0 +1,48 @@
+﻿@model BankingApplication.WebApp.Models.DepositVM
+
+@{
+    ViewData["Title"] = "Deposit";
+}
+
+<h1>Deposit</h1>
+
+<h4>DepositVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Deposit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DestinationAccountNo" class="control-label"></label>
+                <input asp-for="DestinationAccountNo" class="form-control" />
+                <span asp-validation-for="DestinationAccountNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionAmount" class="control-label"></label>
+                <input asp-for="TransactionAmount" class="form-control" />
+                <span asp-validation-for="TransactionAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionType" class="control-label"></label>
+                <select id="TransactionType" name="TransactionType">
+                    <option selected disabled>Select Transaction Type</option>
+                    <option value="Deposit">Deposit</option>
+                </select>
+                <span asp-validation-for="TransactionType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionDescription" class="control-label"></label>
+                <input asp-for="TransactionDescription" class="form-control" />
+                <span asp-validation-for="TransactionDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

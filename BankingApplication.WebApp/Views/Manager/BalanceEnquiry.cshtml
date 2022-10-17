@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "BalanceEnquiry";
+}
+
+<h1>BalanceEnquiry</h1>
+<hr />
+<div class="row">
+    <div class="jumbotron">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group row">
+                    <label class="custom-control-label">AccountNo</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="AccountNo" value=@ViewBag.AccountNo>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Balance</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="AccountNo" value=@ViewBag.Balance>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

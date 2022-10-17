@@ -1,0 +1,56 @@
+﻿@model BankingApplication.WebApp.Models.CustomizedStatementVM
+
+@{
+    ViewData["Title"] = "CustomizedStatementFilter";
+}
+
+<h1>CustomizedStatementFilter</h1>
+@if (ViewData.ContainsKey("CustomizedFilterError"))
+{
+    <div class="alert alert-info">
+
+        <strong>@ViewData["CustomizedFilterError"]</strong>
+
+    </div>
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CustomizedStatementFilter">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AccountNo" class="control-label"></label>
+                <input asp-for="AccountNo" class="form-control" />
+                <span asp-validation-for="AccountNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FromDate" class="control-label"></label>
+                <input asp-for="FromDate" class="form-control" />
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDate" class="control-label"></label>
+                <input asp-for="ToDate" class="form-control" />
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfTransaction" class="control-label"></label>
+                <input asp-for="NumberOfTransaction" class="form-control" />
+                <span asp-validation-for="NumberOfTransaction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LowerLimit" class="control-label"></label>
+                <input asp-for="LowerLimit" class="form-control" />
+                <span asp-validation-for="LowerLimit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
