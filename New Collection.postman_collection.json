@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "b23bb0f6-7cd1-4cbe-a535-6c6cacae1f52",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FundTransfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SourceAccountNo\":\"SB000004\",\r\n    \"DestinationAccountNo\":\"SB000006\",\r\n    \"TransactionAmount\" : 2000,\r\n    \"TransactionType\" : \"Transfer\",\r\n    \"TransactionDescription\" : \"WebService Testing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4316/api/Home/FundTransfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4316",
+					"path": [
+						"api",
+						"Home",
+						"FundTransfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mini Statement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4316/api/Home/MiniStatement/SB000004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4316",
+					"path": [
+						"api",
+						"Home",
+						"MiniStatement",
+						"SB000004"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customized Statement",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"NumberOfTransaction\":4,\r\n        \"LowerLimit\": 100,\r\n        \"FromDate\": \"2022-07-28T00:00:00\",\r\n        \"ToDate\": \"2022-08-01T00:00:00\",\r\n        \"AccountNo\": \"SB000004\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4316/api/Home/CustomizedStatement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4316",
+					"path": [
+						"api",
+						"Home",
+						"CustomizedStatement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance Enquiry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4316/api/Home/BalanceEnquiry/CO000006",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4316",
+					"path": [
+						"api",
+						"Home",
+						"BalanceEnquiry",
+						"CO000006"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
